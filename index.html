@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trivia Game!</title>
+    <!-- Link to External CSS file -->
+    <link rel="stylesheet" type="text/css" href="C:\Users\asuba\Desktop\TriviaGame\assets\css\style.css">
+    <!-- Link to JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Link to External Javascript file -->
+    <script src="C:\Users\asuba\Desktop\TriviaGame\assets\javascript\app.js"></script>
+</head>
+
+<body>
+    <!-- HTML for the start of the game -->
+    <div id="start">
+        <h1 class="title">US Government Trivia</h1>
+        <button id="begin-quiz">Begin Quiz</button>
+    </div>
+    <!-- HTML while quiz is being taken -->
+    <div id="during">
+        <h1 class="title">US Government Trivia</h1>
+        <!-- Timer -->
+        <h1 id="timer">Time Remaining: <span id="time-number">90 Seconds</span></h1>
+        <!-- Questions -->
+        <h1>1. The US federal government has three branches: judicial, executive and _______.</h1>
+        <input type="radio" name="q1" value="administrative">administrative
+        <input type="radio" name="q1" value="divisional">divisional
+        <input type="radio" name="q1" value="legislative">legislative
+        <input type="radio" name="q1" value="associative">associative
+        <!-- legislative -->
+        <h1>2. State government also have three branches of government.</h1>
+        <input type="radio" name="q2" value="True">True
+        <input type="radio" name="q2" value="False">False
+        <!-- True -->
+        <h1>3. What is the main function of the judicial branch when it comes to laws?</h1>
+        <input type="radio" name="q3" value="Judge/interpret the laws">Judge/interpret the laws
+        <input type="radio" name="q3" value="Execute the laws">Administer the laws
+        <input type="radio" name="q3" value="Create the laws">Create the laws
+        <input type="radio" name="q3" value="They have nothing to do with laws">They have nothing to do with laws
+        <!-- Judge/interpret the laws -->
+        <h1>4. What Amendment gave women the right to vote in 1920?</h1>
+        <input type="radio" name="q4" value="12th">12th
+        <input type="radio" name="q4" value="18th">18th
+        <input type="radio" name="q4" value="19th">19th
+        <input type="radio" name="q4" value="27th">27th
+        <!-- 19th -->
+        <h1>5. The Presidential line of succession states that should a President die, resign or be removed from office, the Vice President takes over. Who is next in the line of succession?</h1>
+        <input type="radio" name="q5" value="Secretary of State">Secretary of State
+        <input type="radio" name="q5" value="President pro tempore of the Senate">President pro tempore of the Senate.
+        <input type="radio" name="q5" value="Attorney General">Attorney General
+        <input type="radio" name="q5" value="Speaker of the House of Representatives">Speaker of the House of Representatives
+        <!-- Speaker of the House of Representatives -->
+        <h1>6. "Popular sovereignty" means <em>what</em> in normal-person English?</h1>
+        <input type="radio" name="q6" value="Power to/of the people">Power to/of the people
+        <input type="radio" name="q6" value="Always faithful">Always faithful
+        <input type="radio" name="q6" value="In god we trust">In god we trust
+        <input type="radio" name="q6" value="Down with the ship">Down with the ship
+        <!-- Power to/of the people -->
+        <h1>7. How many US Senators are there in total?</h1>
+        <input type="radio" name="q7" value="435">435
+        <input type="radio" name="q7" value="100">100
+        <input type="radio" name="q7" value="50">50
+        <input type="radio" name="q7" value="538">538
+        <!-- 100 -->
+        <h1>8. What important legal and constitutional  concept was established in the landmark case, <em>Marbury v. Madison</em>?</h1>
+        <input type="radio" name="q8" value="Quid pro quo">Quid pro quo
+        <input type="radio" name="q8" value="Let the buyer beware">Let the buyer beware
+        <input type="radio" name="q8" value="Judicial review">Judicial review
+        <input type="radio" name="q8" value="Separate but equal">Separate but equal
+        <!-- Judicial review -->
+        <h1>9. A tariff is a tax on exports leaving the country.</h1>
+        <input type="radio" name="q9" value="True">True
+        <input type="radio" name="q9" value="False">False
+        <!-- False -->
+        <h1>10. Contrary to popular opinion, the president is not elected by the popular vote, or the most amount of people that vote in an election. Who or what actually elects the next president?</h1>
+        <input type="radio" name="q10" value="The executive body">The executive body
+        <input type="radio" name="q10" value="The Senate Elecorate Committee">The Senate Electorate Committee
+        <input type="radio" name="q10" value="The electoral college">The electoral college
+        <input type="radio" name="q8" value="It's all rigged. Don't even bother voting">It's all rigged. Don't even bother voting.
+        <!-- The electoral college -->
+        </br>
+        </br>
+        </br>
+        </br>
+        <button id="finish-button">Finished!</button>
+    </div>
+    <!-- End of quiz -->
+<div id="end">
+	<h1 class="title">US Government Trivia</h1>
+	<h1 id="done">Finished!</h1>
+</br>
+<h1>Correct Answers: <span id="correct">0</span></h1>
+<h1>Wrong Answers: <span id="wrong">0</span></h1>
+<h1>Unanswered: <span id="unanswered">0</span></h1>
+<p>Answers:</p>
+<h4>1. Legislative is the last branch.</h4>
+<h4>2. True, state governments have three branches.</h4>
+<h4>3. The judicial branch judges the laws in court.</h4> 
+<h4>4. The 19th Amendment gave women the vote.</h4> 
+<h4>5. Speaker of the House is next in line.</h4> 
+<h4>6. "Power to the people" is the common understanding. </h4> 
+<h4>7. 100 Senators, 2 per state.</h4> 
+<h4>8. Marbury v. Madison established the legal precedent of judicial review, or whether something is constitutional or not.</h4> 
+<h4>9. False, a tariff is a tax on imports.</h4> 
+<h4>10. A candidate needs 270 of the 538 votes to win the electoral college and the election.</h4>  
+
+</div>
+
+
+
+
+</html>
