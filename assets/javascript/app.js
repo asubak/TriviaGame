@@ -14,24 +14,24 @@ $(document).ready(function() {
     $("#during").hide();
     $("#end").hide();
 
-//After cliking the Begin Quiz button, hide the #start div and show the #during div
+    //After cliking the Begin Quiz button, hide the #start div and show the #during div
     $("#begin-quiz").on("click", function() {
         $("#start").hide();
         $("#during").show();
-//Countdown from 90 seconds starts upon clicking the Begin Quiz button
+        //Countdown from 90 seconds starts upon clicking the Begin Quiz button
         startCountdown();
         return;
     });
-//count down from 90 to 0, display on screen by writing to html
+    //count down from 90 to 0, display on screen by writing to html
     function countdown() {
         count--;
         $("#time-number").html(count + " Seconds");
-//If Finished button is clicked, automatically reach 0 seconds. 
+        //If Finished button is clicked, automatically reach 0 seconds. 
         $("#finish-button").on("click", function() {
             count = 0;
             return;
         });
-//When count gets to 0 naturally, run TimeUp function and hide #during div.
+        //When count gets to 0 naturally, run TimeUp function and hide #during div.
         if (count === -1) {
             timeUp();
             $("#during").hide();
@@ -41,7 +41,7 @@ $(document).ready(function() {
     function startCountdown() {
         setInterval(countdown, 1000);
     }
-//Checking answers in the radio buttons for right, wrong and unanswered questions. 
+    //Checking answers in the radio buttons for right, wrong and unanswered questions. 
     function timeUp() {
         var Q1 = $('input:radio[name="q1"]:checked').val();
         var Q2 = $('input:radio[name="q2"]:checked').val();
@@ -53,7 +53,7 @@ $(document).ready(function() {
         var Q8 = $('input:radio[name="q8"]:checked').val();
         var Q9 = $('input:radio[name="q9"]:checked').val();
         var Q10 = $('input:radio[name="q10"]:checked').val();
-//logic for what the quiz should do given a certain answer or input. 
+        //logic for what the quiz should do given a certain answer or input. 
         if (Q1 === undefined) {
             unansweredCount++;
         } else if (Q1 === 'legislative') {
@@ -134,7 +134,7 @@ $(document).ready(function() {
             wrongCount++;
         }
 
-//target the ids to add to the appropriate score
+        //target the ids to add to the appropriate score
         $("#correct").html(rightCount);
         $("#wrong").html(wrongCount);
         $("#unanswered").html(unansweredCount);
